@@ -259,6 +259,7 @@ namespace Entry {
                     break;
 
                 case '':
+                    wtimeout(entry_window, 0);
                     switch(wgetch(entry_window)) {
                         case 'b':
                             jump_to_prev_word();
@@ -267,7 +268,15 @@ namespace Entry {
                         case 'f':
                             jump_to_next_word();
                             break;
+
+                        case ERR:
+                            /* Time out. User pressed ESC */
+                            endwin();
+                            exit(0);
                     }
+
+                    /* Bloking IO */
+                    wtimeout(entry_window, -1);
 
                 default:
                     if(c >= 32) {
