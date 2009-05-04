@@ -2,5 +2,5 @@
 
 cd src
 make
-mv peach-finder ..
 strip peach-finder
+mv peach-finder ..
