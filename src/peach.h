@@ -67,7 +67,7 @@ namespace Files {
 }
 
 #include <stdlib.h>
-#include <ncurses.h>
+#include <ncursesw/ncurses.h>
 
 extern WINDOW *entry_window;
 extern WINDOW *files_window;

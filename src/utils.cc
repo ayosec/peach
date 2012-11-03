@@ -25,6 +25,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <iostream>
+#include <unistd.h>
 #include "peach.h"
 
 int mbposition(const char* buffer, int limit)
